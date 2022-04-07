@@ -1,0 +1,249 @@
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+.wrapper {}
+
+/*-------------меню гамбургер--------------*/
+.hamburger-menu {
+}
+/* скрываем чекбокс */
+#menu__toggle {
+	opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+	display: flex; /* используем flex для центрирования содержимого */
+	align-items: center;  /* центрируем содержимое кнопки */
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 2;
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: #616161;
+	transition-duration: .25s;
+}
+.menu__btn > span::before {
+	content: '';
+	top: -8px;
+}
+.menu__btn > span::after {
+	content: '';
+	top: 8px;
+}
+/* контейнер меню */
+.menu__box {
+	display: block;
+	position: fixed;
+	visibility: hidden;
+	top: 0;
+	right: -100%;
+	width: 300px;
+	height: 100%;
+	margin: 0;
+	padding: 80px 0;
+	list-style: none;
+	text-align: center;
+	background-color: #ECEFF1;
+	box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+	transition-duration: .25s;
+	z-index: 1;
+}
+/* элементы меню */
+.menu__item {
+	display: block;
+	padding: 12px 24px;
+	color: #6C6C6C;
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration: none;
+	transition-duration: .25s;
+}
+.menu__item:hover {
+	background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+	transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+	visibility: visible;
+	right: 0;
+}
+/*-------------шапка-----------------*/
+.block1 {
+	background: linear-gradient(#F5F5F5 50%, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.1));
+}
+.block1__content {
+	max-width: 1180px;
+	padding: 80px 20px 0px 20px;
+	display: grid;
+	margin: 0 auto;
+	position: relative;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+.header__logo {
+	font-size: 38px;
+	line-height: 35px;
+	color: #6C6C6C;
+	font-weight: 600;
+	text-align: center;
+	border: 4px solid #6C6C6C;
+	max-width: 150px;
+	padding: 9px;
+}
+.header__logo span:first-child {
+	color: #fc6744;
+}
+.block1__section {
+	height: 400px;
+}
+.section {
+	display: grid;
+	grid-gap: 35px;
+	justify-self: center;
+	max-width: 700px;
+}
+.section__title {
+	font-size: 50px;
+	line-height: 46px;
+	font-weight: 600;
+	color: #6C6C6C;
+	text-align: center;
+	align-self: end;
+}
+.section__title span:first-child {
+	color: #fc6744;
+}
+.section__text {
+	font-size: 16px;
+	line-height: 25px;
+	color: #6C6C6C;
+	text-align: center;
+}
+.block1__form {
+	display: grid;
+	grid-row-gap: 20px;
+	color: #000;
+	width: 370px;
+	border-radius: 2px;
+	filter: drop-shadow(0 0 28.5px rgba(20,20,21,0.2));
+	background-color: #fff;
+	padding: 25px 40px 20px 40px;
+	margin: -3px;
+}
+.block1__form span:first-child {
+	justify-self: end;
+	color: #fc6744;
+	font-weight: 600;
+	grid-row: 1;
+	grid-column: 1;
+}
+.block1__form span {
+	justify-self: start;
+	font-size: 20px;
+	line-height: 25px;
+	grid-row: 1;
+	grid-column: 2;
+}
+.form__name {
+	font-size: 15px;
+	line-height: 25px;
+	border-bottom: 1px solid #C7C7C7;
+	grid-row: 2;
+	grid-column: 1/3;
+	height: 40px;
+}
+.form__email {
+	font-size: 15px;
+	line-height: 25px;
+	border-bottom: 1px solid #C7C7C7;
+	grid-row: 3;
+	grid-column: 1/3;
+	height: 40px;
+}
+.form__message {
+	font-size: 15px;
+	line-height: 25px;
+	border-bottom: 1px solid #C7C7C7;
+	grid-row: 4;
+	grid-column: 1/3;
+	height: 90px;
+}
+.form__button {
+	justify-self: center;
+	font-size: 16px;
+	line-height: 25px;
+	color: #ffffff;
+	grid-row: 5;
+	grid-column: 1/3;
+	background: #ff5c36;
+	width: 240px;
+	height: 55px;
+	border-radius: 30px;
+}
+.form__button:hover {
+	filter: drop-shadow(1.91px 10.833px 10px rgba(20,20,21,0.08));
+	border: 1px solid rgba(1,2,2,0.07);
+}
+.block1__background {
+	position: absolute;
+	max-width: 100%;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+/*-------адаптив------------*/
+
+@media (max-width: 768px) {
+	.block1__content {
+		padding: 50px 20px 0px 20px;
+	}
+	.block1__section {
+		height: 300px;
+	}
+	.block1__background {
+		height: 300px;
+	}
+}
+@media (max-width: 480px) {
+	.block1__content {
+		padding: 30px 10px 0px 10px;
+	}
+	.section__title {
+		font-size: 30px;
+	}
+	.block1__form {
+		width: 100%;
+		padding: 25px 20px 20px 20px;
+	}
+	.block1__background {
+		display: none;
+	}
+}
