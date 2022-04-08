@@ -132,7 +132,6 @@
 }
 .section__title {
 	font-size: 50px;
-	line-height: 46px;
 	font-weight: 600;
 	text-align: center;
 	align-self: end;
@@ -295,13 +294,79 @@
 .crimson {
 	background-color: #f74770;
 }
-/*-------адаптив------------*/
+/*---------третья часть-------*/
+.block3 {
+	background: #FBFBFB;
+}
+.block3__content {
+	max-width: 1180px;
+	padding: 0px 20px 170px 20px;
+	display: grid;
+	margin: 0 auto;
+}
+.block3__section {
+	grid-gap: 20px;
+	height: 300px;
+}
+.block3__foto {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-row-gap: 20px;
+	grid-column-gap: 30px;
+}
+.block3__foto img {
+	display: block;
+	width: 100%;
+}
+/*-------------------------попап----------------------*/
+body.lock{
+	overflow: hidden;
+}
+.popup{
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.5s ease 0s;
+	z-index: 10;
+}
+.popup__content{
+	position: relative;
+}
+.popup.open{
+	opacity: 1;
+	visibility: visible;
+}
+.close-popup{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+}
+.popup__image {
+	max-width: 100%;
+	vertical-align: top;
+}
+/*---------четвёртая часть-------*/
 
+/*-------адаптив------------*/
 @media (max-width: 768px) {
 	.block1__content {
 		padding: 50px 20px 0px 20px;
 	}
 	.block1__section {
+		grid-gap: 25px;
 		height: 300px;
 	}
 	.block1__background {
@@ -313,10 +378,23 @@
 	.block2__section {
 		height: 250px;
 	}
+	.block3__content {
+		padding: 0px 20px 80px 20px;
+	}
+	.block3__section {
+		height: 260px;
+	}
+	.block3__foto {
+		grid-row-gap: 15px;
+		grid-column-gap: 20px;
+	}
 }
 @media (max-width: 480px) {
 	.block1__content {
 		padding: 30px 10px 0px 10px;
+	}
+	.block1__section {
+		grid-gap: 20px;
 	}
 	.section__title {
 		font-size: 30px;
@@ -333,5 +411,16 @@
 	}
 	.block2__section {
 		height: 200px;
+	}
+	.block3__content {
+		padding: 0px 10px 50px 10px;
+	}
+	.block3__section {
+		height: 240px;
+	}
+	.block3__foto {
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: 10px;
+		grid-column-gap: 10px;
 	}
 }
