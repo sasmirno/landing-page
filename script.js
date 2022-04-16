@@ -119,3 +119,8 @@ document.addEventListener('keydown', function (e) {
 		Element.prototype.msMatchsSelector;
 	}
 })();
+
+function visibility(show, hide) {
+	document.getElementById(hide).style.visibility = "visible";
+	document.getElementById(show).style.visibility = "hidden";
+}
