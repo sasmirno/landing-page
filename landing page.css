@@ -635,7 +635,70 @@ body.lock{
 .active, .dot:hover {
 	background-color: #ff6e47;
 }
-
+/*---------седьмая часть-------*/
+.block7 {
+	background: #FBFBFB;
+}
+.block7__content {
+	max-width: 1180px;
+	padding: 70px 20px 90px 20px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	grid-gap: 20px;
+}
+/*---------подвал-------*/
+.footer {
+	padding: 40px 20px 50px 20px;
+	background: #F7F7F7;
+	display: grid;
+	justify-items: center;
+	grid-gap: 50px;
+}
+.footer__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 240px;
+	height: 60px;
+	border-radius: 27px;
+	color: #000;
+	text-decoration: none;
+	background: #fff;
+	filter: drop-shadow(1.042px 5.909px 7px rgba(20,20,21,0.09));
+}
+.footer__button:hover {
+	filter: drop-shadow(1.91px 10.833px 10px rgba(20,20,21,0.07));
+	border: 1px solid rgba(1,2,2,0.07);
+}
+.footer__socials {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	grid-gap: 15px;
+}
+.footer__socials a {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	color: #ffffff;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #d3d3d3;
+}
+.footer__socials a:hover {
+	filter: drop-shadow(0 0 11.5px rgba(20,20,21,0.29));
+	background: #ff6e47;
+}
+.footer__socials span {
+	font-size: 17px;
+	line-height: 46px;
+	color: #040404;
+	text-align: center;
+}
 /*-------адаптив------------*/
 @media (max-width: 1000px) {
 	.block4 {
@@ -703,6 +766,9 @@ body.lock{
 	}
 	.prev, .next {
 		top: 46%;
+	}
+	.block7__content {
+		padding: 50px 20px 70px 20px;
 	}
 }
 @media (max-width: 760px) {
@@ -782,5 +848,13 @@ body.lock{
 	}
 	.block6 {
 		padding: 0px 10px 50px 10px;
+	}
+	.block7__content {
+		padding: 30px 20px 50px 20px;
+		justify-content: space-around;
+	}
+	.footer {
+		padding: 20px 10px 20px 10px;
+		grid-gap: 30px;
 	}
 }
