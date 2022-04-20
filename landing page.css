@@ -550,18 +550,25 @@ body.lock{
 	grid-gap: 20px;
 	height: 300px;
 }
+.block6__slideshow_1 {
+	display: block;
+}
+.block6__slideshow_2 {
+	display: none;
+}
 .block6__slideshow {
 	position: relative;
 }
 .block6__slides {
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: space-around;
+	grid-gap: 20px;
+	margin: 0px 40px;
 }
 .block6__reviews {
 	display: grid;
 	justify-items: center;
 	width: 100%;
-	height: 270px;
+	min-height: 270px;
 	max-width: 540px;
 	border-radius: 1px;
 	filter: drop-shadow(0 0 0.5px rgba(20,20,21,0.75));
@@ -622,7 +629,7 @@ body.lock{
 	background-color: #ff6e47;
 	color: #ffffff;
 }
-.dot {
+.dot1, .dot2 {
 	cursor: pointer;
 	height: 6px;
 	width: 18px;
@@ -632,7 +639,7 @@ body.lock{
 	display: inline-block;
 	transition: background-color 0.6s ease;
 }
-.active, .dot:hover {
+.active, .dot1:hover, .dot2:hover {
 	background-color: #ff6e47;
 }
 /*---------седьмая часть-------*/
@@ -712,6 +719,12 @@ body.lock{
 	}
 	.block5__teammate_layer3 {
 		grid-gap: 50px;
+	}
+	.block6__slideshow_1 {
+		display: none;
+	}
+	.block6__slideshow_2 {
+		display: block;
 	}
 }
 @media (max-width: 768px) {
