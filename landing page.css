@@ -87,7 +87,8 @@
 	transition-duration: .25s;
 }
 .menu__item:hover {
-	background-color: #CFD8DC;
+	background-color: #fc6744;
+	color: #fff;
 }
 #menu__toggle:checked ~ .menu__btn > span {
 	transform: rotate(45deg);
@@ -315,6 +316,35 @@
 	display: block;
 	width: 100%;
 }
+.prev2, .next2 {
+	display: grid;
+	cursor: pointer;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+	font-size: 48px;
+	transition: 0.6s ease;
+	color: rgba(0,0,0,0);
+	user-select: none;
+	-webkit-user-select: none;
+}
+.prev2 span {
+	align-self: center;
+}
+.next2 {
+	right: 0;
+}
+.next2 span {
+	align-self: center;
+	justify-self: end;
+}
+.prev2:hover, .next2:hover {
+	color: rgba(255,255,255,1);
+}
 /*-------------------------попап----------------------*/
 body.lock{
 	overflow: hidden;
@@ -345,11 +375,13 @@ body.lock{
 }
 .close-popup{
 	position: absolute;
-	right: 10px;
-	top: 10px;
+	padding: 10px;
+	right: 0;
+	top: 0;
 	font-size: 20px;
 	color: black;
 	text-decoration: none;
+	z-index: 11;
 }
 .popup__image {
 	max-width: 100%;
@@ -621,6 +653,8 @@ body.lock{
 	background-color: #ffffff;
 	padding: 12px;
 	top: 45%;
+	user-select: none;
+	-webkit-user-select: none;
 }
 .next {
 	right: 0;
